@@ -1,36 +1,34 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
-  * main - Prints 3 combination of numbers
-  *
-  * Return: Always (Success)
-  */
+ * main - in this code you can view la combination de los first 900 numbers
+ *
+ * Return: Always 0 (Sucess)
+ */
 int main(void)
 {
-	int c, i, k;
+	int c;
+	int d = 49;
+	int u = 50;
 
-	for (c = '0'; c <= '9'; c++)
+	for (c = 48; c <= 55; ++c)
 	{
-		for (i = '0'; i <= '9'; i++)
+		for (d = c + 1; d <= 56; ++d)
 		{
-			for (k = '0'; k <= '9'; k++)
+			for (u = 50; u <= 57; ++u)
 			{
-				if (c < i && i < k)
+				putchar(c);
+				putchar(d);
+				putchar(u);
+				if (c != 55 || d != 56 || u != 57)
 				{
-					putchar(c);
-					putchar(i);
-					putchar(k);
-
-					if (c != '7')
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
+}
