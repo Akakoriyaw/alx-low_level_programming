@@ -1,39 +1,46 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
- * main - in this code you can view la combination de los first 900 numbers
- *
- * Return: Always 0 (Sucess)
- */
+  * main - Prints 3 combination of numbers
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int c = 48;
-	int d = 48;
-	int e = 48;
-	int f = 48;
+	int c, i, k, j;
 
-	for (c = 48; c <= 57; ++c)
+	for (c = 48; c <= 57; c++)
 	{
-		for (d = 48; d <= 57; ++d)
+		for (i = 48; i <= 57; i++)
 		{
-			for (e = c; e <= 57; ++e)
+			for (k = 48; k <= 57; k++)
 			{
-				for (f = d + 1; f <= 57; ++f)
+				for (j = 48; j <= 57; j++)
 				{
-					putchar(c);
-					putchar(d);
-					putchar(32);
-					putchar(e);
-					putchar(f);
-					if (c != 57 || d != 56 || e != 57 || f != 57)
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
 					{
-						putchar(44);
-						putchar(32);
+						putchar(c);
+						putchar(i);
+						putchar(' ');
+						putchar(k);
+						putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
+					{
+					break;
+					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
+					}
 					}
 				}
 			}
 		}
 	}
+
+	putchar('\n');
+
 	return (0);
 }
