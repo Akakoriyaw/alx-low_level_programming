@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdio.h>
+
 
 int _putchar(char c);/*_putchar*/
 char *_memset(char *s, char b, unsigned int n);/*prototype function that fills memory with a constant byte.*/
@@ -13,4 +13,4 @@ void print_chessboard(char (*a)[8]);/*prototypefunction that prints the chessboa
 void print_diagsums(int *a, int size);/*prototype function that prints the sum of the two diagonals of a square matrix of integers.*/
 void set_string(char **s, char *to);/*prototype function that sets the value of a pointer to a char.*/
 
-#endif /* HOLBERTON_H */
+#endif /* MAIN_H */
